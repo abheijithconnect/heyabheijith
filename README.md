@@ -1,8 +1,16 @@
-# Abhijith T — portfolio
+# Abhijith T | portfolio
 
-Static site. No build step, no dependencies, no framework. Plain HTML, CSS and vanilla JS.
+Static site. Plain HTML, CSS and vanilla JS. No build step, no dependencies.
 
-## Run it locally
+## Hosting
+
+Hosted on Vercel (project `abheijithonline`), connected to this repo. Every push to `main`
+redeploys automatically. Live at https://abheijithonline.vercel.app
+
+Keep the folder structure intact when uploading: `index.html` at the root, case studies
+inside `work/`, images inside `assets/`. No build step or framework setting is needed.
+
+## Preview locally (optional)
 
 ```bash
 powershell -ExecutionPolicy Bypass -File serve.ps1
@@ -10,60 +18,36 @@ powershell -ExecutionPolicy Bypass -File serve.ps1
 
 Then open http://localhost:5173
 
-## Deploy on GitHub Pages
-
-1. Create a repo and push these files to the root (not inside a subfolder).
-2. Repo → **Settings** → **Pages** → Source: *Deploy from a branch*, Branch: `main`, Folder: `/ (root)`.
-3. The site goes live at `https://<username>.github.io/<repo>/` in about a minute.
-
-Nothing needs configuring, `index.html` is already at the root.
-
 ## Structure
 
 ```
-index.html              landing page
-work/
-  j-estates.html        case 01
-  saan-verdante.html    case 02
-  silverglades.html     case 03
-  care-hospitals.html   case 04
-styles.css              design system + all layout
-main.js                 intro, reveals, parallax, counters, tabs, lightbox, cursor
-assets/logos/           16 client and agency logos
-assets/img/             portrait and case study images
-assets/abhijith-t-cv.pdf
-serve.ps1               local preview server (not needed for deployment)
+index.html                 landing page
+work/legacy-primo.html     case study: The Legacy Primo, Silverglades
+work/j-36.html             case study: J 36, J Estates
+work/care-hospitals.html   case study: Bloom Maternity, CARE Hospitals
+styles.css                 all styling
+main.js                    reveals, nav, tabs, lightbox, view cursor, clock
+assets/img/                portrait and campaign images (shown only on case pages)
+assets/logos/              14 client logos + 2 agency logos, whitespace-trimmed
+assets/abhijith-t-cv.pdf   file behind every "Download CV" link
+serve.ps1                  local preview server, not needed on GitHub
 ```
 
 ## Editing
 
-**Colours and type** are tokens at the top of `styles.css` under `:root`. Changing
-`--paper` and `--ink` re-themes the entire site, including the two inverted bands.
-
-**Adding a case study:** copy any file in `work/`, change the copy and the image
-paths, then add a matching `.wcard` block to the work grid in `index.html`. Update the
-"Next case" link at the bottom of the previous case so the chain stays closed.
-
-**The hero headline** is hand-broken into three `.line` spans so the rise-in reveal
-works one line at a time. If you rewrite it, keep each line short enough that it does
-not re-wrap, or lower the `font-size` clamp on `.hero__h1`.
-
-**Logos** are normalised: every tile is the same box and every mark is `object-fit:
-contain` inside it, so rows stay level regardless of the source file's aspect ratio.
-Add `class="logo logo--bleed"` for a mark that should fill its tile edge to edge
-(Mustapure uses this).
-
-## Still to swap in
-
-- `assets/abhijith-t-cv.pdf` is the older resume. Overwrite it with the current one.
-- The Saan Verdante and J Estates images are cropped from screenshots. If the original
-  exports turn up they will be noticeably sharper.
-- Testimonials are attributed by role (Founder, Mediamix / Operations Manager, Forest
-  Creative Communications). Add names if you get sign-off.
-
-## Accessibility and performance
-
-- Respects `prefers-reduced-motion`, which disables every animation and parallax.
-- Scroll reveals fall back to visible if `IntersectionObserver` never fires, so the page
-  can never end up blank.
-- Case study images are lazy loaded. Total page weight is around 3 MB on first load.
+- **Colours and fonts** live at the top of `styles.css` under `:root`: midnight navy grounds
+  (`--bg`, `--bg-2`, `--surface`), ivory type (`--ink`), and champagne gold (`--accent`,
+  `--gold-grad`) used sparingly for highlights and the primary button. Logos sit on ivory
+  tiles (`--tile`). Type is Bebas Neue for display and Jost for text.
+- **The hero headline** is hand-broken into three `.line` spans (no wrapping). If you
+  rewrite it, keep each line short or lower the `.hero__h1` font-size clamp.
+- **Layout** runs on one 12-column grid (`.grid`) inside one container width, so
+  everything lines up to the same edges. Keep new blocks on that grid.
+- **Logos** sit in a 7-column grid (2 columns on phones), so 14 marks always make
+  complete rows. If you add one, add them in sevens or change the column count in
+  `.logos`. A white logo needs `class="logo logo--dark"`; a full-colour square uses
+  `logo--fill`.
+- **Adding a project:** copy a file in `work/`, swap the copy and images, add a matching
+  `<a class="wrow">` row in the work section of `index.html`, and update the
+  "Next project" links so they chain.
+- **To swap the CV**, overwrite `assets/abhijith-t-cv.pdf` with the same filename.
