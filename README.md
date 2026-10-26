@@ -26,28 +26,22 @@ work/legacy-primo.html     case study: The Legacy Primo, Silverglades
 work/j-36.html             case study: J 36, J Estates
 work/care-hospitals.html   case study: Bloom Maternity, CARE Hospitals
 styles.css                 all styling
-main.js                    reveals, nav, tabs, lightbox, view cursor, clock
-assets/img/                portrait and campaign images (shown only on case pages)
-assets/logos/              14 client logos + 2 agency logos, whitespace-trimmed
+main.js                    nav, responsive headline, full-bleed liquid silk hero + About photo light effect (WebGL), scroll-lit about text, copy email, quick menu (Ctrl/Cmd K), lightbox, reveals
+assets/img/                golden.jpg (colour) with golden-tone.jpg fallback for the About light effect, plus campaign images
+assets/logos/              original logos; mono/ holds the single-ink versions used on the site
 assets/abhijith-t-cv.pdf   file behind every "Download CV" link
 serve.ps1                  local preview server, not needed on GitHub
 ```
 
 ## Editing
 
-- **Colours and fonts** live at the top of `styles.css` under `:root`: midnight navy grounds
-  (`--bg`, `--bg-2`, `--surface`), ivory type (`--ink`), and champagne gold (`--accent`,
-  `--gold-grad`) used sparingly for highlights and the primary button. Logos sit on ivory
-  tiles (`--tile`). Type is Bebas Neue for display and Jost for text.
-- **The hero headline** is hand-broken into three `.line` spans (no wrapping). If you
-  rewrite it, keep each line short or lower the `.hero__h1` font-size clamp.
-- **Layout** runs on one 12-column grid (`.grid`) inside one container width, so
+- **Colours and fonts** live at the top of `styles.css` under `:root`: espresso (`--bg`), cream (`--text`) and copper (`--copper`, hover and accents only), plus one tint per campaign (`--t-primo`, `--t-j36`, `--t-care`). Type is Manrope (light for display, regular for text), never italic.
+- **Contact** is four direct links (email, LinkedIn, WhatsApp, resume). No form, no backend.
+- **Quick menu**: Ctrl K / Cmd K on any page, or the key in the nav. Items live in `ITEMS` in main.js.
+- **Logo sizes** on the clients wall are set per logo with `--w` in index.html so wide and square marks carry equal weight.
+- **Layout** sits in one container width (`.wrap`) with a 12-column grid (label on the left, content on the right), so
   everything lines up to the same edges. Keep new blocks on that grid.
-- **Logos** sit in a 7-column grid (2 columns on phones), so 14 marks always make
-  complete rows. If you add one, add them in sevens or change the column count in
-  `.logos`. A white logo needs `class="logo logo--dark"`; a full-colour square uses
-  `logo--fill`.
 - **Adding a project:** copy a file in `work/`, swap the copy and images, add a matching
-  `<a class="wrow">` row in the work section of `index.html`, and update the
+  `<a class="wcard">` card in the work section of `index.html`, and update the
   "Next project" links so they chain.
 - **To swap the CV**, overwrite `assets/abhijith-t-cv.pdf` with the same filename.

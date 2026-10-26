@@ -2,297 +2,124 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0A0F1C">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#16100C">
 <meta name="color-scheme" content="dark">
-<title>Abhijith T | Marketing &amp; Brand Communication</title>
-<meta name="description" content="Abhijith T plans and writes marketing and brand communication in Gurugram: positioning, go-to-market, campaigns and content for real estate and consumer brands.">
-<meta property="og:title" content="Abhijith T | Marketing &amp; Brand Communication">
-<meta property="og:description" content="Positioning, go-to-market, campaigns and content for real estate and consumer brands.">
+<title>Abhijith T | Brand Strategist</title>
+<meta name="description" content="Abhijith T is a brand strategist based in Delhi NCR, working across positioning, go-to-market, campaigns and content, and building AI-powered websites and digital products.">
+<meta property="og:title" content="Abhijith T | Brand Strategist">
+<meta property="og:description" content="Strategy, story and systems for growing brands.">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="viewcursor" id="viewcursor" aria-hidden="true">View</div>
-
-<!-- ============ NAV ============ -->
 <header class="nav" id="nav">
-  <div class="container nav__inner">
-    <a href="#top" class="nav__mark" aria-label="Abhijith T, home">Abhijith <i>T</i></a>
+  <div class="wrap nav__in">
+    <a href="index.html" class="mark">Abhijith T</a>
     <nav class="nav__links" aria-label="Main">
-      <a href="#work">Work</a>
-      <a href="#brands">Brands</a>
-      <a href="#skills">What I do</a>
+      <a href="work.html">Work</a>
       <a href="#about">About</a>
-      <a href="#contact" class="nav__cta">Contact</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
 
-<div class="menu" id="menu">
-  <a href="#work">Work</a>
-  <a href="#brands">Brands</a>
-  <a href="#skills">What I do</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</div>
-
 <main id="top">
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="container">
-    <div class="hero__top grid">
-      <div class="hero__id">
-        <p class="hero__eyebrow fade" style="--d:.05s">Marketing &amp; Brand Communication</p>
-        <h1 class="hero__h1">
-          <span class="line"><span style="--d:.12s">I plan and write</span></span>
-          <span class="line"><span style="--d:.2s" class="gold">marketing</span></span>
-          <span class="line"><span style="--d:.28s">for brands.</span></span>
-        </h1>
-        <p class="hero__intro fade" style="--d:.55s">Mostly in real estate. Brand positioning, launch campaigns, social content and the copy that holds it all together.</p>
-        <div class="hero__actions fade" style="--d:.7s">
-          <a href="#work" class="btn btn--solid">View work</a>
-          <a href="assets/abhijith-t-cv.pdf" class="btn" download>Download CV</a>
-        </div>
+<section class="hero" data-silk-area>
+  <canvas class="hero__silk" data-silk aria-hidden="true"></canvas>
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <h1 class="hero__h1" data-vf><span><span>Strategy, story and systems</span></span><span><span>for growing brands.</span></span></h1>
+      <p class="hero__sub">Brand strategist based in Delhi NCR. I work across positioning, go-to-market, campaigns and content, and design and build AI-powered websites and digital products.</p>
+      <div class="hero__links">
+        <a href="work.html" class="link">View work <span>&rarr;</span></a>
+        <a href="assets/abhijith-t-cv.pdf" class="link" download>Download CV <span>&darr;</span></a>
+        <button class="cmdk-hint" type="button" data-cmdk>Quick menu <kbd data-kbd>Ctrl K</kbd></button>
       </div>
-
-      <figure class="hero__portrait fade" style="--d:.4s">
-        <div class="frame-img"><img src="assets/img/portrait.jpg" alt="Portrait of Abhijith T"></div>
-      </figure>
     </div>
-
-    <dl class="hero__meta fade" style="--d:.85s">
-      <div><dt>Currently</dt><dd>Brand Strategist, Mediamix</dd></div>
-      <div><dt>Based in</dt><dd>Gurugram, India</dd></div>
-      <div><dt>Focus</dt><dd>Real estate, healthcare, consumer</dd></div>
-    </dl>
-  </div>
-</section>
-
-<!-- ============ WORK (text only; the work opens on click) ============ -->
-<section class="work" id="work">
-  <div class="container">
-    <header class="sechead reveal">
-      <h2 class="sechead__title">Selected work</h2>
-      <p class="sechead__note">Open a project to see the full campaign.</p>
-    </header>
-
-    <div class="worklist">
-      <a class="wrow reveal" href="work/legacy-primo.html" data-view>
-        <span class="wrow__main">
-          <span class="wrow__title">The Legacy Primo</span>
-          <span class="wrow__desc">A five-part social campaign. One real product fact per frame.</span>
-        </span>
-        <span class="wrow__client">Silverglades</span>
-        <span class="wrow__type">Ultra-luxury residential<br>Social campaign</span>
-        <span class="wrow__go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-
-      <a class="wrow reveal" href="work/j-36.html" data-view>
-        <span class="wrow__main">
-          <span class="wrow__title">J 36</span>
-          <span class="wrow__desc">A nine-part campaign for senior living. Safety features, framed as independence.</span>
-        </span>
-        <span class="wrow__client">J Estates</span>
-        <span class="wrow__type">Senior living<br>Social campaign</span>
-        <span class="wrow__go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-
-      <a class="wrow reveal" href="work/care-hospitals.html" data-view>
-        <span class="wrow__main">
-          <span class="wrow__title">Bloom Maternity</span>
-          <span class="wrow__desc">Clear pricing and plain language for families comparing hospitals.</span>
-        </span>
-        <span class="wrow__client">CARE Hospitals</span>
-        <span class="wrow__type">Healthcare<br>Print collateral</span>
-        <span class="wrow__go" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+    <div class="hero__tags" data-depth="18" aria-label="Focus areas">
+      <span class="tag">Positioning</span><span class="tag">Go-to-market</span><span class="tag">A/B testing</span>
+      <span class="tag">Performance</span><span class="tag">Content</span><span class="tag">AI products</span>
     </div>
   </div>
 </section>
 
-<!-- ============ BRANDS ============ -->
-<section class="brands" id="brands">
-  <div class="container">
-    <header class="sechead reveal">
-      <h2 class="sechead__title">Brands I have worked with</h2>
-      <p class="sechead__note">Real estate, healthcare, FMCG, travel and interiors.</p>
-    </header>
-
-    <div class="logos reveal">
-      <span class="logo"><img src="assets/logos/silverglades.png" alt="Silverglades"></span>
-      <span class="logo"><img src="assets/logos/j-estates.png" alt="J Estates"></span>
-      <span class="logo logo--dark"><img src="assets/logos/saan-verdante.png" alt="Saan Verdante"></span>
-      <span class="logo"><img src="assets/logos/tdi.png" alt="TDI"></span>
-      <span class="logo"><img src="assets/logos/saiven.jpg" alt="Saiven"></span>
-      <span class="logo"><img src="assets/logos/srinath-collective.jpg" alt="Srinath Collective"></span>
-      <span class="logo logo--dark"><img src="assets/logos/rrd.png" alt="Renu Robin Design"></span>
-      <span class="logo"><img src="assets/logos/care.jpg" alt="CARE Hospitals"></span>
-      <span class="logo"><img src="assets/logos/casa-elara.png" alt="Casa Elara"></span>
-      <span class="logo"><img src="assets/logos/big-breaks.png" alt="Big Breaks"></span>
-      <span class="logo logo--fill"><img src="assets/logos/mustapure.jpg" alt="Mustapure"></span>
-      <span class="logo"><img src="assets/logos/pir.jpg" alt="PIR"></span>
-      <span class="logo"><img src="assets/logos/ahh.jpg" alt="AHH"></span>
-      <span class="logo"><img src="assets/logos/arc.jpg" alt="Arc"></span>
-    </div>
-
-    <div class="agencies reveal">
-      <p class="agencies__label">Agencies</p>
-      <div class="logos logos--agency">
-        <span class="logo"><img src="assets/logos/mediamix.jpg" alt="Mediamix"></span>
-        <span class="logo"><img src="assets/logos/forest-creative.jpg" alt="Forest Creative Communications"></span>
+<section class="section" id="about">
+  <div class="wrap grid about">
+    <div class="about__text">
+      <h2 class="sr">About</h2>
+      <div class="lit" data-lit>
+        <p><span class="lbl">About</span> I grew up in Kerala, studied economics and political science at Ramjas College in Delhi, and started out as a copywriter at Forest Creative Communications in Bengaluru. Today I'm a brand strategist at Mediamix in Delhi NCR, working across twelve brands in real estate, healthcare, FMCG and travel.</p>
+        <p>Economics taught me to read a market. Copywriting taught me to say one thing clearly. Building AI-powered websites and digital products taught me to take an idea all the way to something people use. I'm constantly taking in new information, new ways of answering a problem and new technology to build with.</p>
       </div>
+      <dl class="caps reveal">
+        <div><dt>Strategy</dt><dd><span class="tag tag--q">Brand positioning</span><span class="tag tag--q">Go-to-market</span><span class="tag tag--q">Messaging</span><span class="tag tag--q">Audience research</span><span class="tag tag--q">Competitive analysis</span></dd></div>
+        <div><dt>Growth</dt><dd><span class="tag tag--q">Performance marketing</span><span class="tag tag--q">A/B testing</span><span class="tag tag--q">CRO</span><span class="tag tag--q">SEO and AEO</span><span class="tag tag--q">CRM and lifecycle</span><span class="tag tag--q">Analytics and attribution</span></dd></div>
+        <div><dt>Content</dt><dd><span class="tag tag--q">Copywriting</span><span class="tag tag--q">Content strategy</span><span class="tag tag--q">Brand voice</span><span class="tag tag--q">Social campaigns</span><span class="tag tag--q">OOH</span></dd></div>
+        <div><dt>Product</dt><dd><span class="tag tag--q">AI-powered websites</span><span class="tag tag--q">Landing pages</span><span class="tag tag--q">Digital products</span><span class="tag tag--q">Marketing automation</span></dd></div>
+      </dl>
+    </div>
+    <figure class="about__pic">
+      <div class="light" data-light="assets/img/golden.jpg" style="--ar:704/860">
+        <img src="assets/img/golden-tone.jpg" alt="Abhijith T at golden hour in the mountains" width="704" height="860" loading="lazy">
+      </div>
+      <figcaption><span>Golden hour</span><span class="light__hint" data-hint>Move across the photo</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="clients">
+  <div class="wrap">
+    <h2 class="sr">Clients</h2>
+    <p class="intro"><span class="lbl">Clients</span> Brands I have worked on, and the agencies behind the work.</p>
+    <div class="wall reveal" id="wall">
+      <figure style="--w:74%"><img src="assets/logos/mono/silverglades.png" alt="Silverglades"></figure>
+      <figure style="--w:42%"><img src="assets/logos/mono/tdi.png" alt="TDI"></figure>
+      <figure style="--w:54%"><img src="assets/logos/mono/j-estates.png" alt="J Estates"></figure>
+      <figure style="--w:44%"><img src="assets/logos/mono/care.png" alt="CARE Hospitals"></figure>
+      <figure style="--w:66%"><img src="assets/logos/mono/srinath-collective.png" alt="Srinath Collective"></figure>
+      <figure style="--w:38%"><img src="assets/logos/mono/arc.png" alt="Arc Developers"></figure>
+      <figure style="--w:74%"><img src="assets/logos/mono/rrd.png" alt="Renu Robin Design"></figure>
+      <figure style="--w:44%"><img src="assets/logos/mono/casa-elara.png" alt="Casa Elara"></figure>
+      <figure style="--w:76%"><img src="assets/logos/mono/big-breaks.png" alt="Big Breaks"></figure>
+      <figure style="--w:43%"><img src="assets/logos/mono/saiven.png" alt="Saiven Developers"></figure>
+      <figure style="--w:54%"><img src="assets/logos/mono/saan-verdante.png" alt="Saan Verdante"></figure>
+      <figure style="--w:32%"><img src="assets/logos/mono/pir.png" alt="PIR"></figure>
+      <figure style="--w:80%"><img src="assets/logos/mono/ahh.png" alt="Aarogya Hastha Hospitals"></figure>
+      <figure style="--w:36%"><img src="assets/logos/mono/mustapure.png" alt="Mustapure"></figure>
+      <figure class="ag" style="--w:74%"><img src="assets/logos/mono/mediamix.png" alt="Mediamix"></figure>
+      <figure class="ag" style="--w:70%"><img src="assets/logos/mono/forest-creative.png" alt="Forest Creative Communications"></figure>
     </div>
   </div>
 </section>
 
-<!-- ============ WHAT I DO ============ -->
-<section class="skills" id="skills">
-  <div class="container grid">
-    <header class="skills__head reveal">
-      <h2 class="sechead__title">What I do</h2>
-      <p class="skills__lead">Most of my week sits somewhere between the brief and the final post. These are the parts I handle.</p>
-    </header>
-
-    <div class="tabs reveal">
-      <div class="tabs__nav" role="tablist" aria-label="Skill areas">
-        <button class="tab is-active" role="tab" aria-selected="true" aria-controls="t1" id="tab-t1">Strategy</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="t2" id="tab-t2">Content &amp; Copy</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="t5" id="tab-t5">Web &amp; AI</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="t3" id="tab-t3">Performance</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="t4" id="tab-t4">Operations</button>
-        <span class="tabs__ink" id="tabink" aria-hidden="true"></span>
-      </div>
-
-      <div class="panel is-active" id="t1" role="tabpanel" aria-labelledby="tab-t1">
-        <ul class="skilllist">
-          <li><b>Brand positioning</b><span>Working out what a brand should stand for, and saying it simply.</span></li>
-          <li><b>Go-to-market (GTM)</b><span>Launch strategy for new projects: audience, pricing story, channel plan and sales material.</span></li>
-          <li><b>Messaging</b><span>One clear story, adjusted for each audience.</span></li>
-          <li><b>Competitor research</b><span>Seeing what others in the category say, so we can say something else.</span></li>
-          <li><b>Client handling</b><span>Running the day-to-day with founders and leadership teams.</span></li>
-        </ul>
-      </div>
-
-      <div class="panel" id="t2" role="tabpanel" aria-labelledby="tab-t2" hidden>
-        <ul class="skilllist">
-          <li><b>Copywriting</b><span>Ads, brand lines, brochures, landing pages and mailers.</span></li>
-          <li><b>Content marketing</b><span>Content calendars planned around what people are searching for.</span></li>
-          <li><b>Social media</b><span>Campaign series, carousels and captions for Instagram and LinkedIn.</span></li>
-          <li><b>OOH</b><span>Hoardings, site branding and outdoor media that read in a glance.</span></li>
-          <li><b>Campaign ideas</b><span>Concepts that can run for months, not a single post.</span></li>
-          <li><b>Scripts</b><span>Short films, walkthroughs and reels.</span></li>
-        </ul>
-      </div>
-
-      <div class="panel" id="t5" role="tabpanel" aria-labelledby="tab-t5" hidden>
-        <ul class="skilllist">
-          <li><b>Website content</b><span>Site copy and page structure for real estate and consumer brands.</span></li>
-          <li><b>Landing pages</b><span>Single-purpose pages written to turn a visit into an enquiry.</span></li>
-          <li><b>AI products</b><span>Three AI web prototypes, and AppPilot, an AI-led app store optimisation concept.</span></li>
-          <li><b>No-code builds</b><span>Working prototypes and pages without waiting on a developer.</span></li>
-          <li><b>Prompt design</b><span>Prompts and workflows that make AI useful for real marketing work.</span></li>
-        </ul>
-      </div>
-
-      <div class="panel" id="t3" role="tabpanel" aria-labelledby="tab-t3" hidden>
-        <ul class="skilllist">
-          <li><b>Meta &amp; Google ads</b><span>Briefing campaigns and reading them for lead quality, not just volume.</span></li>
-          <li><b>SEO &amp; AEO</b><span>Content structured so search engines and AI answers pick it up.</span></li>
-          <li><b>Analytics</b><span>Google Analytics and Looker Studio reports that a founder can read quickly.</span></li>
-          <li><b>CRM &amp; outreach</b><span>Apollo, lead lists and follow-up sequences.</span></li>
-          <li><b>Reporting</b><span>A weekly view of what is working and what to change.</span></li>
-        </ul>
-      </div>
-
-      <div class="panel" id="t4" role="tabpanel" aria-labelledby="tab-t4" hidden>
-        <ul class="skilllist">
-          <li><b>Workflow setup</b><span>Briefs, approvals and trackers so work moves without chasing.</span></li>
-          <li><b>Team management</b><span>Designers, interns and freelancers working to one plan.</span></li>
-          <li><b>Vendor coordination</b><span>Shoots, print and production partners.</span></li>
-          <li><b>AI tools</b><span>Used for research and first drafts, with the final call made by a person.</span></li>
-          <li><b>Process design</b><span>Simple systems that let a small team handle many brands.</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section class="about" id="about">
-  <div class="container grid">
-    <div class="about__text reveal">
-      <h2 class="sechead__title">About</h2>
-      <p>I studied Economics and Political Science at Ramjas College, University of Delhi, and started in marketing as a copywriter at Forest Creative Communications in Bengaluru.</p>
-      <p>Today I am a brand strategist at Mediamix in Gurugram, handling brand communication for twelve clients. I work directly with founders on how their brand is positioned, launched and marketed, and I manage the team that makes it.</p>
-      <p>Most of my work is in real estate, from ultra-luxury launches to senior living. I also work across healthcare, FMCG, travel and interiors.</p>
-      <p>Outside campaigns, I write website content and build small AI products.</p>
-    </div>
-
-    <div class="about__side reveal">
-      <h3 class="block__title">Experience</h3>
-      <ul class="xp">
-        <li><span class="xp__role">Brand Strategist</span><span class="xp__org">Mediamix, Gurugram</span><span class="xp__yr">2025 to now</span></li>
-        <li><span class="xp__role">Content &amp; Copywriter</span><span class="xp__org">Forest Creative Communications, Bengaluru</span><span class="xp__yr">2024 to 2025</span></li>
-        <li><span class="xp__role">BA Economics &amp; Political Science</span><span class="xp__org">Ramjas College, University of Delhi</span><span class="xp__yr">2024</span></li>
-      </ul>
-
-      <figure class="quote">
-        <blockquote>Within weeks, Abhijith was writing for our healthcare and real estate clients on his own. His drafts came in clean and close to final, and the content templates he set up made the whole team faster.</blockquote>
-        <figcaption>Operations Manager, Forest Creative Communications</figcaption>
-      </figure>
-    </div>
+<section class="section" id="contact">
+  <div class="wrap">
+    <h2 class="sr">Contact</h2>
+    <p class="say reveal"><span class="lbl">Contact</span> For roles, projects or a conversation about either, write to <a class="mail" id="mail" href="mailto:abhijithprapoyil@gmail.com">abhijithprapoyil@gmail.com</a> or message me on <a href="https://wa.me/918848232086" target="_blank" rel="noopener">WhatsApp</a>. You can also find me on <a href="https://www.linkedin.com/in/abheijith" target="_blank" rel="noopener">LinkedIn</a> or <a href="assets/abhijith-t-cv.pdf" download>download my resume</a>.</p>
   </div>
 </section>
 
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer class="footer" id="contact">
-  <div class="container">
-    <div class="footer__cta reveal">
-      <p class="footer__kicker">Have a role or a project in mind?</p>
-      <a href="mailto:abhijithprapoyil@gmail.com" class="footer__mail">abhijithprapoyil@gmail.com</a>
-    </div>
-
-    <div class="footer__cols">
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:abhijithprapoyil@gmail.com">Email</a>
-        <a href="tel:+918848232086">+91 88482 32086</a>
-      </div>
-      <div>
-        <h4>Elsewhere</h4>
-        <a href="https://www.linkedin.com/in/abheijith" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="assets/abhijith-t-cv.pdf" download>Resume (PDF)</a>
-      </div>
-      <div>
-        <h4>Based in</h4>
-        <p>Gurugram, India</p>
-        <p class="footer__clock" id="clock">IST</p>
-      </div>
-      <div>
-        <h4>Site</h4>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-      </div>
-    </div>
-
-    <div class="footer__bar">
-      <span>&copy; <span id="year">2026</span> Abhijith T</span>
-      <span class="footer__vibe">The code is vibecoded. The copy is not.</span>
-      <a href="#top" class="footer__top">Back to top</a>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot__note">All work shown was created for clients during my time at Mediamix and Forest Creative Communications. Brand names, logos and creative assets belong to their respective owners and appear here only to show my role in the work.</p>
+    <div class="foot__bar">
+      <span>&copy; <span id="year">2026</span> Abhijith T. All rights reserved.</span>
+      <span>The code is vibecoded. The copy is not.</span>
+      <a href="#top">Back to top</a>
     </div>
   </div>
 </footer>
 
+<div class="pill" id="pill" aria-hidden="true">Copy email</div>
 <script src="main.js"></script>
 </body>
 </html>
