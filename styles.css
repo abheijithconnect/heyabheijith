@@ -16,9 +16,8 @@
   --line-2:rgba(239,231,220,.28);
   --copper:#C8794A;
 
-  --t-primo:#232B4A;      /* campaign tints */
-  --t-j36:#E9D2BF;
-  --t-care:#DCD2EC;
+  /* the stage every piece of work sits on: one surface, warm light from above */
+  --stage:radial-gradient(90% 70% at 50% -10%,rgba(200,121,74,.13),rgba(200,121,74,0) 65%),linear-gradient(180deg,#211913,#1A140F);
   --tile:#F3EDE4;
 
   --font:"Manrope", "Helvetica Neue", Arial, sans-serif;
@@ -209,8 +208,10 @@ kbd{display:inline-flex;align-items:center;justify-content:center;white-space:no
 /* ---------- work index + cards ---------- */
 .works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
 .wcard{display:flex;flex-direction:column;gap:16px}
-.wcard__art{position:relative;aspect-ratio:4/3.5;overflow:hidden;background:var(--tint);isolation:isolate}
-.wcard__art img{position:absolute;left:50%;top:52%;width:44%;border-radius:3px;box-shadow:0 18px 40px rgba(0,0,0,.32);transition:transform .7s var(--ease)}
+.wcard__art{position:relative;aspect-ratio:4/3.5;overflow:hidden;background:var(--stage);box-shadow:inset 0 0 0 1px var(--line);isolation:isolate}
+.wcard__art::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 55% at 50% 45%,rgba(200,121,74,.14),transparent 70%);opacity:0;transition:opacity .7s var(--ease)}
+.wcard:hover .wcard__art::before{opacity:1}
+.wcard__art img{position:absolute;left:50%;top:52%;width:44%;border-radius:3px;box-shadow:0 24px 48px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.3);transition:transform .7s var(--ease)}
 .wcard__art img:nth-child(1){transform:translate(-112%,-50%) rotate(-8deg)}
 .wcard__art img:nth-child(2){transform:translate(-50%,-54%);z-index:2}
 .wcard__art img:nth-child(3){transform:translate(12%,-48%) rotate(8deg)}
@@ -255,23 +256,32 @@ kbd{display:inline-flex;align-items:center;justify-content:center;white-space:no
 .facts dt{font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .facts dd{font-size:15px}
 
-.gallery{background:var(--tint,var(--bg-2));padding:clamp(14px,3vw,44px)}
+.gallery{background:var(--stage);box-shadow:inset 0 0 0 1px var(--line);padding:clamp(14px,3vw,44px)}
 .gallery__grid{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:clamp(10px,1.4vw,18px)}
 .gallery figure{cursor:zoom-in}
-.gallery img{width:100%;border-radius:3px;box-shadow:0 14px 36px rgba(0,0,0,.25);transition:transform .6s var(--ease)}
+.gallery img{width:100%;border-radius:3px;box-shadow:0 20px 44px rgba(0,0,0,.45),0 2px 6px rgba(0,0,0,.25);transition:transform .6s var(--ease)}
 .gallery figure:hover img{transform:translateY(-4px)}
-.gallery figcaption{margin-top:10px;font-size:13.5px;color:var(--cap,#3a3029)}
-.gallery--dark{--cap:rgba(239,231,220,.72)}
+.gallery figcaption{margin-top:12px;font-size:13.5px;color:var(--text-2)}
 .gallery__grid--5{--cols:6}
 .gallery__grid--5 figure{grid-column:span 2}
 .gallery__grid--5 figure:nth-child(-n+2){grid-column:span 3}
 
-.story{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
-.story article{padding-top:16px;border-top:1px solid var(--line-2)}
-.story h2{font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-.story p{color:var(--text-2);margin-bottom:.8em}
-.story p:last-child{margin-bottom:0}
-.story .pull{color:var(--text);font-size:clamp(17px,1.3vw,19px);line-height:1.4}
+/* case study: a small label on the left, the writing on the right */
+.cs{padding:clamp(40px,5vw,72px) 0 0}
+.cs__row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding:clamp(26px,3vw,40px) 0;border-top:1px solid var(--line)}
+.cs__label{grid-column:1 / span 3;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--copper);padding-top:4px}
+.cs__body{grid-column:5 / span 7}
+.cs__body > p{max-width:60ch;font-size:clamp(15.5px,1.1vw,17px);line-height:1.75;color:var(--text-2)}
+.cs__body > p + p{margin-top:1em}
+.cs__pull{margin-bottom:16px;font-weight:300;font-size:clamp(24px,2.4vw,34px)!important;line-height:1.2!important;letter-spacing:-.025em;color:var(--text)!important}
+/* the lines as they ran, each with a short note on what it is doing */
+.cs__lines{margin:0;padding:0;list-style:none}
+.cs__lines li{padding:18px 0;border-bottom:1px solid var(--line)}
+.cs__lines li:first-child{padding-top:0}
+.cs__lines li:last-child{border-bottom:0;padding-bottom:0}
+.cs__lines q{display:block;quotes:none;font-weight:300;font-size:clamp(20px,1.9vw,27px);line-height:1.25;letter-spacing:-.02em;color:var(--text)}
+.cs__lines q::before{content:"";display:inline-block;width:6px;height:6px;margin:0 12px 5px 0;background:var(--copper);transform:rotate(45deg)}
+.cs__lines p{margin-top:8px;max-width:58ch;font-size:14.5px;line-height:1.7;color:var(--text-2)}
 
 .nextrow{display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px;padding:clamp(28px,3.4vw,44px) 0;border-top:1px solid var(--line)}
 .nextrow small{display:block;margin-bottom:10px}
@@ -303,7 +313,8 @@ kbd{display:inline-flex;align-items:center;justify-content:center;white-space:no
   .wall .ag{padding-top:14px}
   .wall .ag::after{top:6px;left:7px;font-size:9px}
   .shead p{grid-column:7 / span 6}
-  .story{grid-template-columns:1fr;row-gap:28px}
+  .cs__label{grid-column:1 / -1;margin-bottom:14px}
+  .cs__body{grid-column:1 / -1}
   .case-hero__top > div,.case-hero__lead{grid-column:1 / -1}
   .case-hero__lead{margin-top:18px}
 }
