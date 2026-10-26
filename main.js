@@ -309,6 +309,24 @@
     light();
   }
 
+  /* ---------- expertise: the ring system scales to its column; the legend brings one ring into focus ---------- */
+  var sys = document.querySelector('[data-sys]');
+  if (sys) {
+    var fitSys = function () { sys.style.setProperty('--k', Math.min(1, sys.parentElement.clientWidth / 760).toFixed(3)); };
+    fitSys(); window.addEventListener('resize', fitSys);
+    var ringEls = [].slice.call(sys.querySelectorAll('.ring'));
+    var legendEls = [].slice.call(document.querySelectorAll('[data-legend] .xpl'));
+    var focus = function (k) {
+      sys.classList.toggle('has-on', k !== null);
+      ringEls.forEach(function (r, i) { r.classList.toggle('is-on', i === k); });
+      legendEls.forEach(function (l, i) { l.classList.toggle('is-on', i === k); });
+    };
+    legendEls.forEach(function (l, i) {
+      l.addEventListener('mouseenter', function () { focus(i); });
+      l.addEventListener('mouseleave', function () { focus(null); });
+    });
+  }
+
   /* ---------- contact: copy the address on click, with a label that follows the cursor ---------- */
   var mail = document.getElementById('mail'), pill = document.getElementById('pill');
   if (mail && pill && !touch) {
@@ -347,9 +365,9 @@
     { g: 'Work', label: 'Bloom Maternity', hint: 'CARE Hospitals', run: go('work/care-hospitals.html') },
     { g: 'Work', label: 'All work', hint: 'Index', run: go('work.html') },
     { g: 'Go to', label: 'Home', hint: '', run: go('index.html') },
-    { g: 'Go to', label: 'About', hint: 'Story and capabilities', run: go('index.html#about') },
-    { g: 'Go to', label: 'Clients', hint: 'Brands and agencies', run: go('index.html#clients') },
-    { g: 'Go to', label: 'Contact', hint: '', run: go('index.html#contact') },
+    { g: 'Go to', label: 'About', hint: 'Story and expertise', run: go('about.html#about') },
+    { g: 'Go to', label: 'Clients', hint: 'Brands and agencies', run: go('about.html#clients') },
+    { g: 'Go to', label: 'Contact', hint: '', run: go('about.html#contact') },
     { g: 'Connect', label: 'Copy email address', hint: EMAIL, run: function () {
         var done = function () { say('Email copied'); };
         if (navigator.clipboard) navigator.clipboard.writeText(EMAIL).then(done, function () { say(EMAIL); }); else say(EMAIL);

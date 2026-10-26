@@ -21,7 +21,8 @@ Then open http://localhost:5173
 ## Structure
 
 ```
-index.html                 landing page
+index.html                 homepage: the silk hero only
+about.html                 story, photo, expertise rings, clients, contact
 work/legacy-primo.html     case study: The Legacy Primo, Silverglades
 work/j-36.html             case study: J 36, J Estates
 work/care-hospitals.html   case study: Bloom Maternity, CARE Hospitals
